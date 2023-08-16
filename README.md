@@ -22,12 +22,14 @@ allprojects {
     
 > Step 2. Add the dependency
 
-Add it in your root app.gradle at the end of repositories: <br/>
+Add it in your root app. gradle at the end of repositories: <br/> <br/>
+[![](https://jitpack.io/v/rehmankhan8360/admobAppOpenAd.svg)](https://jitpack.io/#rehmankhan8360/admobAppOpenAd)
+
 ```gradle
 dependencies {
 	...
 	implementation 'com.google.android.gms:play-services-ads:22.2.0'
-	implementation 'com.github.rehmankhan8360:admobAppOpenAd:1.0.0'
+	implementation 'com.github.rehmankhan8360:admobAppOpenAd:version'
 	...
 }
 ```
