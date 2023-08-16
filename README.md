@@ -48,7 +48,7 @@ AppOpenAdManager(context, "ADMOB_OPEN_ADS_ID");
         android:name="com.google.android.gms.ads.APPLICATION_ID"
         android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"/>
 
-    </application>
+</application>
 ```
 
 <br/>
