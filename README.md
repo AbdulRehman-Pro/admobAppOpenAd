@@ -26,6 +26,7 @@ Add it in your root app.gradle at the end of repositories: <br/>
 ```gradle
 dependencies {
 	...
+	implementation 'com.google.android.gms:play-services-ads:22.2.0'
 	implementation 'com.github.rehmankhan8360:admobAppOpenAd:1.0.0'
 	...
 }
