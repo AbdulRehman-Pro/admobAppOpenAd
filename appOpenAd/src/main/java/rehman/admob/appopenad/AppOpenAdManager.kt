@@ -4,18 +4,19 @@ import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import android.util.Log
-import com.google.android.gms.ads.AdError
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.FullScreenContentCallback
-import com.google.android.gms.ads.LoadAdError
-import com.google.android.gms.ads.appopen.AppOpenAd
 import androidx.annotation.NonNull
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
+import com.google.android.gms.ads.AdError
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.FullScreenContentCallback
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.appopen.AppOpenAd
 
-class AppOpenAdManager(private val application: Application, adID: String) : LifecycleObserver, Application.ActivityLifecycleCallbacks {
+class AppOpenAdManager(private val application: Application, adID: String) : LifecycleObserver,
+    Application.ActivityLifecycleCallbacks {
 
     companion object {
         private const val LOG_TAG = "AppOpenAdManager"
@@ -59,9 +60,12 @@ class AppOpenAdManager(private val application: Application, adID: String) : Lif
             }
         }
         val adRequest = getAdRequest()
-        AppOpenAd.load(application,
-            AD_UNIT_ID, adRequest,
-            AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, loadCallback as AppOpenAd.AppOpenAdLoadCallback
+        AppOpenAd.load(
+            application,
+            AD_UNIT_ID,
+            adRequest,
+            AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT,
+            loadCallback as AppOpenAd.AppOpenAdLoadCallback
         )
     }
 
